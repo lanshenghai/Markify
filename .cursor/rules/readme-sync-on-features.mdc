@@ -1,0 +1,28 @@
+---
+description: Keep README.md aligned whenever features or user-facing behavior changes
+alwaysApply: true
+---
+
+# README maintenance
+
+Whenever you **add or change project functionality**, decide whether **English `README.md`** needs an update in the **same change** (or immediately after). Treat README drift as part of the feature, not an optional follow-up.
+
+## When README usually must be updated
+
+- New or removed **CLI flags**, defaults, or behavior (`markify/cli.py`, entry points).
+- New or changed **supported formats**, converters, or **dependencies** (`pyproject.toml`, `markify/converters/`).
+- User-facing **limitations**, **requirements** (e.g. Tesseract, Python version), or **installation** steps.
+- Any new **examples** or workflows users should know about.
+
+## When README may stay unchanged
+
+- Internal refactors, renames, or tests with **no** change to behavior, CLI, or dependencies.
+
+## What to verify in README
+
+- **Usage** and **examples** still match the CLI.
+- **CLI options** table (or equivalent) lists current flags and defaults.
+- **Requirements** and **limitations** still match the code.
+- If `pyproject.toml` `description` or scripts change, README stays consistent.
+
+If a feature is documented only in code comments, consider moving the essential user-facing parts into README so discoverability matches behavior.
