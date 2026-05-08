@@ -15,6 +15,7 @@ dependencies = [
 
 [project.scripts]
 markify = "markify.cli:main"
+markify-gui = "markify.gui:main"
 
 [build-system]
 requires = ["setuptools>=61.0"]

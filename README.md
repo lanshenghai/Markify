@@ -15,9 +15,25 @@ From the repository root:
 pip install -e .
 ```
 
-This installs the `markify` command-line tool.
+This installs the `markify` command-line tool and the **GUI** launcher `markify-gui`.
 
-## Usage
+## GUI
+
+Launch the desktop window (Python **tkinter**, no extra dependency):
+
+```bash
+markify-gui
+```
+
+Or:
+
+```bash
+python -m markify.gui
+```
+
+Pick an input file (PDF, DOCX, XLSX/XLSM, PPTX), set the output `.md` path, adjust options (PowerPoint OCR and attachments folder, Excel row limit), then **Convert**. The **Progress** panel shows steps and timing; **Preview** shows the beginning of the Markdown result (full content is always written to the output file).
+
+## CLI usage
 
 ```bash
 markify INPUT [-o OUTPUT.md] [options]
