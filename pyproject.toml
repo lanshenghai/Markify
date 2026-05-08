@@ -1,0 +1,24 @@
+[project]
+name = "markify"
+version = "0.1.0"
+description = "Convert PDF, Word, Excel, PowerPoint to Markdown"
+requires-python = ">=3.10"
+dependencies = [
+    "pymupdf>=1.24.0",
+    "python-docx>=1.1.0",
+    "openpyxl>=3.1.0",
+    "python-pptx>=1.0.0",
+    "Pillow>=10.0.0",
+    "pytesseract>=0.3.10",
+]
+
+[project.scripts]
+markify = "markify.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["markify*"]
